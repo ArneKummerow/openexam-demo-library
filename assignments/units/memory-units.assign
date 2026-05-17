@@ -1,0 +1,21 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Memory units
+points: 2
+addons:
+  - cloze
+tags:
+  - units
+  - intro
+---
+
+Fill in the missing memory units.
+
+::: cloze
+1024 bytes is one {=kilobyte|KB}, and 1024 of those is one {=megabyte|MB}.
+:::
+
+::: solution
+The SI/binary distinction matters in practice, but in this course we treat one kilobyte as exactly 1024 bytes (the IEC binary prefix "kibibyte" / KiB is the precise term).
+:::

@@ -1,0 +1,19 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Hello, world (Python)
+points: 2
+addons:
+  - code
+tags:
+  - code
+  - intro
+---
+
+Write a Python program that prints `Hello, World!` (no quotes, capitalised exactly as shown) followed by a trailing newline.
+
+::: code { language=python }
+```
+Hello, World!
+```
+:::

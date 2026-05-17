@@ -1,0 +1,21 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Explain the cache hierarchy
+points: 4
+addons:
+  - freetext
+tags:
+  - instructions
+---
+
+Modern CPUs have several levels of cache (L1, L2, L3) sitting between the registers and DRAM. In 3–4 sentences, explain *why* the hierarchy exists rather than a single large cache.
+
+::: freetext { rows=6, placeholder="3–4 sentences" }
+A complete answer touches at least two of:
+
+- the speed–capacity trade-off (smaller is faster);
+- temporal locality (small hot working set vs. occasional large reads);
+- physical constraints (cycle budget for an L1 hit vs. L3);
+- cost (SRAM is expensive per bit, DRAM is cheap).
+:::

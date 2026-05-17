@@ -1,0 +1,20 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Bits per byte
+points: 1
+addons:
+  - mc
+tags:
+  - units
+  - intro
+---
+
+How many bits are there in one byte?
+
+::: mc { single }
+- [ ] 4
+- [x] 8
+- [ ] 16
+- [ ] 32
+:::

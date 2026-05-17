@@ -1,0 +1,148 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Demo CS Department — exam design
+license: CC-BY-4.0
+---
+
+Institutional theming for the demo Computer Science department: A4 geometry, serif body, a deep institutional blue + warm-gold accent, and an honest-to-god letterhead bar so a template visibly differs from a bare test preview.
+
+```html-head
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Inter:wght@500;700&display=swap">
+```
+
+```latex-preamble
+% pdflatex-compatible (the renderer pins `pdflatex` via TEX program).
+% Institutional colours.
+\usepackage{xcolor}
+\definecolor{deptblue}{HTML}{002B54}
+\definecolor{deptgold}{HTML}{C29A2C}
+
+% Serif body + sans heading via the `newtx` family (which already
+% configures a Helvetica-like sans behind \sffamily). No external
+% font files required.
+\usepackage{newtxtext,newtxmath}
+
+% Coloured section heads in the sans family.
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\sffamily\bfseries\color{deptblue}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\sffamily\bfseries\color{deptblue}}
+  {\thesubsection}{1em}{}
+
+% Institutional running header.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\small\color{deptblue}\textbf{Demo CS Department}}
+\fancyhead[R]{\sffamily\small Spring 2026 \textperiodcentered{} Confidential}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{\color{deptblue}%
+    \leaders\hrule height \headrulewidth\hfill}}
+
+% Colour the title (\maketitle's default is black).
+\usepackage{titling}
+\pretitle{\begin{center}\sffamily\Huge\bfseries\color{deptblue}}
+\posttitle{\end{center}}
+```
+
+```css
+:root {
+  --oe-accent: #002b54;
+  --oe-accent-soft: #cfd8e3;
+  --oe-gold: #c29a2c;
+  --oe-paper: #f5efe0;
+  --oe-ink: #1b1b1b;
+  --oe-font-body: "EB Garamond", Georgia, "Times New Roman", serif;
+  --oe-font-heading: "Inter", system-ui, sans-serif;
+}
+
+/* Warm paper background and serif body so the template clearly
+   reads as "the printed exam", not "a web page". */
+html, body { background: var(--oe-paper); color: var(--oe-ink); }
+body {
+  font-family: var(--oe-font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.oe-document {
+  background: #ffffff;
+  max-width: 46rem;
+  margin: 1.5rem auto 3rem;
+  padding: 1.5rem 2.5rem 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid var(--oe-accent);
+}
+
+/* Letterhead. Pure CSS — no DOM changes needed. */
+.oe-document::before {
+  content: "Demo CS Department · Spring 2026 · Confidential exam paper";
+  display: block;
+  margin: -0.5rem -2.5rem 1.5rem;
+  padding: 0.5rem 2.5rem;
+  background: var(--oe-accent);
+  color: #fff;
+  font-family: var(--oe-font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--oe-font-heading);
+  color: var(--oe-accent);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+h1 {
+  font-size: 2.1rem;
+  border-bottom: 3px double var(--oe-accent);
+  padding-bottom: 0.3em;
+}
+h2 {
+  margin-top: 2rem;
+  padding-left: 0.6em;
+  border-left: 4px solid var(--oe-gold);
+}
+h3 { color: var(--oe-accent); }
+
+/* Per-assignment cards: visible institutional border + a gold
+   "Q" marker so individual questions stand out on the page. */
+.oe-inline-assignment {
+  border: 1px solid var(--oe-accent-soft);
+  border-left: 4px solid var(--oe-gold);
+  border-radius: 2px;
+  background: #fcfaf3;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.5rem 1.25rem;
+  position: relative;
+}
+.oe-inline-assignment > h2 {
+  font-size: 1.15rem;
+  margin: 0.5em 0 0.4em;
+  padding-left: 0;
+  border-left: none;
+  border-bottom: 1px solid var(--oe-accent-soft);
+  padding-bottom: 0.2em;
+  color: var(--oe-accent);
+}
+
+code, pre {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  background: #1b1b1b;
+  color: #f5efe0;
+}
+code { padding: 0.05em 0.35em; border-radius: 3px; }
+pre { border-color: var(--oe-accent); }
+
+.oe-solution {
+  border-left-color: var(--oe-gold);
+  background: rgba(194, 154, 44, 0.12);
+}
+.oe-solution-label { color: var(--oe-gold); }
+```

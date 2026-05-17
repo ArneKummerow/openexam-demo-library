@@ -1,0 +1,20 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Classify these RISC-V instructions
+points: 3
+addons:
+  - match
+tags:
+  - instructions
+---
+
+Match each RISC-V instruction to its functional category.
+
+::: match
+- `addi` -> arithmetic
+- `lw` -> memory
+- `beq` -> control flow
+- `sw` -> memory
+- `slli` -> arithmetic
+:::

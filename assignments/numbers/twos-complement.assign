@@ -1,0 +1,16 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Two's complement
+points: 2
+addons:
+  - numeric
+tags:
+  - numbers
+---
+
+In 8-bit two's-complement representation, what signed decimal value does the bit pattern `11111111` represent?
+
+::: numeric
+-1
+:::

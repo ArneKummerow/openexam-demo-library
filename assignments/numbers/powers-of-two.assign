@@ -1,0 +1,21 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Powers of two
+points: 1
+addons:
+  - numeric
+tags:
+  - numbers
+  - intro
+---
+
+A 32-bit register can hold how many distinct values?
+
+::: numeric
+4294967296
+:::
+
+::: hint
+The answer is `2^32`.
+:::

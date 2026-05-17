@@ -1,0 +1,14 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: Endianness
+points: 1
+addons:
+  - truefalse
+tags:
+  - numbers
+---
+
+::: truefalse { answer=true }
+In a little-endian system, the least significant byte of a multi-byte value is stored at the lowest memory address.
+:::

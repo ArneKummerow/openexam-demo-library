@@ -1,0 +1,15 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+---
+spec: openexam/1
+title: MAC-address regex
+points: 2
+addons:
+  - regex
+tags:
+  - code
+---
+
+Write a regex that matches a colon-separated MAC address — six hexadecimal pairs joined by single colons. Examples that should match: `00:1A:2B:3C:4D:5E`, `de:ad:be:ef:00:01`. Case-insensitive.
+
+::: regex { pattern="[0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5}", placeholder="e.g. 00:1A:2B:3C:4D:5E" }
+:::
