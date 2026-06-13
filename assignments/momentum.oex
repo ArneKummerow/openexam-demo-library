@@ -1,0 +1,33 @@
+---
+spec: openexam/2
+title: "Momentum (assignment-level cross-widget validator)"
+params:
+  mass: "int({default: 12})"
+  velocity: "oneOf(3, 5, 7, 9, {default: 7})"
+---
+
+# Calculate momentum
+
+A **{params.mass} kg** object is moving at **{params.velocity} m/s**.
+Calculate its momentum and select the correct unit.
+
+<!--
+  Demo of a single-cell assignment: a single cross-widget validator
+  on the <assignment> sees `answers` from every gradable widget inside
+  by its `id`. The validator runs in the `grade` sandbox and decides
+  one score for the whole assignment, scaled by `points=5`.
+
+  See spec/language.md §9.5 and §10.2.
+-->
+<assignment
+  id=momentum
+  points=5
+  validator={(answers) => Number(answers.calc_value) === params.mass * params.velocity ? (answers.calc_unit === "kg_m_s" ? 1.0 : 0.5) : 0.0}
+>
+The momentum of the object is <input type=number id=calc_value placeholder="magnitude…"/>
+<select id=calc_unit>
+  <option value="J"/>
+  <option value="N"/>
+  <option value="kg_m_s" label="kg·m/s"/>
+</select>.
+</assignment>

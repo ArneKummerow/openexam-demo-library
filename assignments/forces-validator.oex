@@ -1,0 +1,44 @@
+---
+spec: openexam/2
+title: "Net force (multi-widget, single-cell)"
+---
+
+<!--
+  Demo: a single-cell assignment. The `<assignment>` itself
+  carries `points=6` and a `validator={fn}` that receives
+  `answers` keyed by each widget's `id=` and returns a single
+  value in [0, 1]. The score is `points × r`.
+
+  Single-cell child widgets are pure input controls: they do
+  NOT carry any of their tag's `gradingAttrs`
+  (spec/language.md §9.5, `OE-VALIDATE-ASSIGNMENT-MIXED-VALIDATION`).
+  That means no `answer=` on `<numeric>`, no `(x)` shorthand on
+  `<choice>`, no `points=` per widget. The cross-widget
+  validator is the single source of truth.
+
+  See spec/language.md §9.5 + §10.2.
+-->
+<assignment
+  id=forces-multi
+  points=6
+  validator={(answers) => {
+    let s = 0;
+    if (Number(answers.fnet) === 6) s += 0.5;
+    if (answers.direction === "right") s += 0.5;
+    return s;
+  }}
+>
+### Net force on a sliding box
+
+A box rests on a **frictionless** table. A force of **10 N** pushes
+it to the right and another of **4 N** pushes it to the left.
+
+**Net force magnitude (N):**
+<numeric id=fnet unit="N"/>
+
+**Direction the box accelerates:**
+<multipleChoice id=direction>
+  ( ) left
+  ( ) right
+</multipleChoice>
+</assignment>

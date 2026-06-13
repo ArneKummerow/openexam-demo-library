@@ -1,0 +1,18 @@
+---
+spec: openexam/2
+title: "Vectors (multipleChoice shorthand)"
+---
+
+<assignment id=vectors-shorthand>
+### All vector quantities
+Tick **every** vector quantity below.
+
+<multipleChoice id=vectors-shorthand validationStrategy=partialCredit>
+  [ ] Speed
+  [x] Velocity
+  [x] Acceleration
+  [ ] Mass
+  [ ] Temperature
+  [x] Momentum
+</multipleChoice>
+</assignment>

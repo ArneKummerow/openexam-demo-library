@@ -1,0 +1,22 @@
+---
+spec: openexam/2
+title: "Unix commands (matchPairs shorthand)"
+---
+
+<!--
+  Demo: the `- left -> right` markdown-list shorthand for <match>.
+  The match-pairs addon's `transformBody` hook rewrites these list
+  items into canonical `<pair left=... right=.../>` elements before
+  the validator sees the tree.
+-->
+<assignment id=unix-match>
+### Match each Unix command to what it does
+
+<match validationStrategy=partialCredit>
+- `grep` -> Filter lines by pattern
+- `awk` -> Field-oriented stream processor
+- `sed` -> Stream editor (substitutions)
+- `cut` -> Slice columns by delimiter or byte offset
+- `xargs` -> Build command lines from stdin
+</match>
+</assignment>

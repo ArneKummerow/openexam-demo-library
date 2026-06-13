@@ -1,0 +1,32 @@
+---
+spec: openexam/2
+title: "Simple DC circuit (multi-widget, widget-owned)"
+---
+
+<!--
+  Demo: a widget-owned assignment with three gradable widgets,
+  each carrying its own `points=`. The assignment total is the
+  sum (1 + 2 + 1 = 4 pts). Per-widget auto-graders run
+  independently; the grader UI shows one editor card per widget.
+
+  See spec/language.md §9.5.
+-->
+<assignment id=circuit-multi>
+### Power in a simple DC circuit
+
+A **12 V** battery is connected to a single **4 Ω** resistor.
+
+**(a)** Current through the resistor, in amps:
+<numeric id=i_amps answer={12 / 4} tolerance=0.01 unit="A" points=1/>
+
+**(b)** Power dissipated by the resistor, in watts:
+<numeric id=p_watts answer={(12 * 12) / 4} tolerance=0.1 unit="W" points=2/>
+
+**(c)** Compared with a 60 W incandescent bulb, this circuit draws:
+
+<multipleChoice id=compare points=1>
+  ( ) about the same
+  (x) less
+  ( ) more
+</multipleChoice>
+</assignment>

@@ -1,0 +1,22 @@
+---
+spec: openexam/2
+title: "CIDR notation (regexMatch)"
+---
+
+<!--
+  Demo: regexMatch addon. The grader compiles the `pattern` attribute
+  (with optional `flags`) into a RegExp and matches the student's
+  response against it; one point if the regex matches, zero otherwise.
+-->
+<assignment id=cidr-regex>
+### Write a CIDR-block string
+
+Write any valid IPv4 CIDR block in the form `a.b.c.d/n` (no leading zeros,
+each octet 0-255, `n` between 0 and 32 inclusive).
+
+<regex
+  id=cidr-regex
+  pattern="^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])/(3[0-2]|[12]?[0-9])$"
+  flags=""
+  placeholder="e.g. 10.0.0.0/24"/>
+</assignment>

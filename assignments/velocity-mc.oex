@@ -1,0 +1,16 @@
+---
+spec: openexam/2
+title: "Velocity (canonical multipleChoice)"
+---
+
+<assignment id=velocity-canonical>
+### Vector quantity?
+Which of these is a *vector* quantity?
+
+<multipleChoice id=velocity-canonical>
+  <choice value="Speed"/>
+  <choice value="Mass"/>
+  <choice value="Velocity" correct/>
+  <choice value="Temperature"/>
+</multipleChoice>
+</assignment>

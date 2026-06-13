@@ -1,0 +1,30 @@
+---
+spec: openexam/2
+title: "Why binary search beats linear search (mock-LLM auto-grade)"
+---
+
+<!--
+  Demo: an open-response question graded by a `mock-llm` auto-grader.
+  The portal evaluates the rubric attribute (comma-separated rubric
+  points) against the response and writes a justification into the
+  grade's "Justification" field — exactly where a real LLM (Ollama,
+  GPT-N, …) would emit its rationale.
+
+  The rubric is a list of concepts the answer should mention; the
+  mock backend scores the fraction matched and synthesises a
+  human-readable justification listing which concepts were covered
+  and which were missing.
+-->
+<assignment id=binary-search-llm>
+### Algorithmic complexity in plain English
+In **one or two sentences**, explain why binary search runs in O(log n)
+time on a sorted array, where linear search takes O(n).
+
+<freeText
+  id=bs-explanation
+  autoGrader="mock-llm"
+  rubric="sorted, halve, half, divide, log, logarithmic, comparison, doubles"
+  placeholder="one or two sentences"
+  rows=3
+  points=2/>
+</assignment>

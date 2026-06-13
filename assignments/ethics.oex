@@ -1,0 +1,36 @@
+---
+spec: openexam/2
+title: "Engineering ethics (trueFalse + freeText)"
+---
+
+<!--
+  Demo: trueFalse + freeText (both auto-graded modes — `expected=`
+  exact-string match and `keywords=` substring-match against a
+  comma-list).
+-->
+# Engineering ethics
+
+<assignment id=ethics-tf>
+### Reporting safety issues
+*True or false:* An engineer who discovers a safety defect after a product
+has shipped is **always** obligated to inform the public directly, bypassing
+their employer.
+
+<trueFalse answer=false/>
+</assignment>
+
+<assignment id=ethics-exact>
+### The IEEE motto
+The IEEE Code of Ethics asks members to hold the safety, health, and welfare
+of the public *paramount*. Type that single word.
+
+<freeText expected="paramount" placeholder="one word"/>
+</assignment>
+
+<assignment id=ethics-keywords>
+### Brief explanation
+In one sentence, give one reason a confidentiality agreement (NDA) does
+**not** override an engineer's obligation to report imminent safety harms.
+
+<freeText keywords="public,safety,harm,paramount,welfare" placeholder="one sentence"/>
+</assignment>

@@ -1,0 +1,14 @@
+---
+spec: openexam/2
+title: "Kinematics (clozeFill with mixed blanks)"
+---
+
+<assignment id=kinematics-cloze>
+### Fill in the kinematics equations
+
+<cloze id=kinematics-cloze>
+The SI unit of force is the <blank answer="newton" placeholder="unit"/>,
+abbreviated <blank answer="N" caseSensitive=true placeholder="symbol"/>.
+One newton equals <blank answer=1 tolerance=0 placeholder="kg·m·s⁻²"/> kg·m/s².
+</cloze>
+</assignment>

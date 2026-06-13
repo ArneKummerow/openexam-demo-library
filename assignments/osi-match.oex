@@ -1,0 +1,20 @@
+---
+spec: openexam/2
+title: "OSI layers (matchPairs canonical)"
+---
+
+<!--
+  Demo: canonical <match> form — explicit `<pair left=... right=.../>`
+  children. Each pair's `right` side is shuffled per participant by
+  the addon's compose hook.
+-->
+<assignment id=osi-match>
+### Match each OSI layer to its representative protocol
+
+<match id=osi-match validationStrategy=allOrNothing>
+  <pair left="Layer 2 (Data link)"   right="Ethernet (802.3)"/>
+  <pair left="Layer 3 (Network)"     right="IP (IPv4/IPv6)"/>
+  <pair left="Layer 4 (Transport)"   right="TCP"/>
+  <pair left="Layer 7 (Application)" right="HTTP"/>
+</match>
+</assignment>

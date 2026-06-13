@@ -1,0 +1,20 @@
+---
+spec: openexam/2
+title: "Scheduling (parens-shorthand multipleChoice)"
+---
+
+<!--
+  Demo: parens-shorthand `(x) / ( )` for single-correct mc, plus the
+  `oneWrongMinusOne` validation strategy (a wrong answer subtracts a
+  point instead of returning zero).
+-->
+<assignment id=scheduling-parens>
+### Pick the **earliest** sorting algorithm to publish
+
+<multipleChoice id=scheduling-parens validationStrategy=oneWrongMinusOne>
+  (x) Insertion sort (1946)
+  ( ) Merge sort (1948)
+  ( ) Quicksort (1959)
+  ( ) Heapsort (1964)
+</multipleChoice>
+</assignment>

@@ -1,0 +1,32 @@
+---
+spec: openexam/2
+title: "Projectile (params + expression slots)"
+params:
+  # `name=value` keyword args (`default=10`) fail to parse today because
+  # `default` is a reserved JS identifier; CLAUDE.md §8 carryover 4 tracks
+  # amending the spec. The object-literal form `{default: 10}` is the
+  # equivalent that today's parser accepts.
+  mass: "range(1, 50, {default: 10})"
+  velocity: "oneOf(3, 5, 7, 9, {default: 5})"
+  g: 9.81
+---
+
+# Projectile kinetic energy
+
+You launch a projectile of mass **{params.mass} kg** with initial velocity
+**{params.velocity} m/s** straight up. Take *g = {params.g} m/s²*.
+
+<assignment id=ek>
+### Initial kinetic energy
+What is the **initial kinetic energy** in joules?
+
+<numeric id=ek answer={0.5 * params.mass * params.velocity * params.velocity} tolerance=0.5 unit="J"/>
+</assignment>
+
+<assignment id=h-max>
+### Maximum height reached
+Treating the projectile as a point mass with no drag, how high does it rise?
+Answer in metres.
+
+<numeric id=h-max answer={(params.velocity * params.velocity) / (2 * params.g)} tolerance=0.1 unit="m"/>
+</assignment>
